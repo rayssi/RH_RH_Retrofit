@@ -24,7 +24,7 @@ private TextView textResult;
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         JsonPlaceHolderApi jsonPlaceHolderApi=retrofit.create(JsonPlaceHolderApi.class);
-        Call<List<Post>> call=jsonPlaceHolderApi.getPosts();
+        Call<List<Post>> call=jsonPlaceHolderApi.getPosts("6");
         call.enqueue(new Callback<List<Post>>() {
             @Override
             public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
